@@ -10,15 +10,23 @@
 <body>
 
 <header>
-  <div class="container nav">
+  <div class="container nav" >
     <img src="WhatsApp_Image_2026-02-07_at_22.16.58-removebg-preview.png" width="150px" height="100px" alt="">
     
-    <nav>
+
+
+   <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+      
+    <nav id="menu">
       <a href="#sobre">Apresentação</a>
       <a href="#valores">Valores</a>
       <a href="#pacotes">Pacotes</a>
       <a href="#contato" class="btn">Contato</a>
     </nav>
+
   </div>
 </header>
 
@@ -210,3 +218,14 @@
 
 </body>
 </html>
+
+
+
+<script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+</script>

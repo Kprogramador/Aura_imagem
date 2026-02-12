@@ -17,6 +17,7 @@
 body {
   color: var(--azul-escuro);
   background: var(--branco);
+  margin: 0;
 }
 
 .container {
@@ -191,16 +192,16 @@ footer {
   margin-bottom: 8px;
 }
 
-
+/* Melhorar*/
 .section_bg-light{
 
   background-color: var(--azul-escuro);
-  width: 99%;
+    width: 100%;
+  
+  margin: 0;
   max-width: 1100%;
-  margin-left: 10px;
-  margin-right: 10px;
   color: white;
-  padding: 80px;
+  padding: 30px 10px;
 
 }
 
@@ -292,4 +293,59 @@ footer {
 img {
   max-width: 100%;
   height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BOTÃO HAMBURGUER */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, var(--laranja), var(--roxo));
+    text-align: center;
+  }
+
+  nav a {
+    padding: 12px;
+    display: block;
+  }
+
+  /* quando abrir */
+  nav.active {
+    display: flex;
+  }
 }
