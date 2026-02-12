@@ -225,7 +225,20 @@
 const toggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
-toggle.addEventListener("click", () => {
+/* abrir / fechar ao clicar no botão */
+toggle.addEventListener("click", (e) => {
+  e.stopPropagation(); // impede fechar imediatamente
   menu.classList.toggle("active");
 });
+
+/* impedir fechar ao clicar dentro do menu */
+menu.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+/* fechar ao clicar em qualquer lugar da tela */
+document.addEventListener("click", () => {
+  menu.classList.remove("active");
+});
 </script>
+
