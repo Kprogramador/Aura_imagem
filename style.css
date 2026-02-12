@@ -177,6 +177,7 @@ footer {
   color: white;
 }
 
+
 .pacote h3 {
   color: var(--primary);
   margin-bottom: 10px;
@@ -188,4 +189,107 @@ footer {
 
 .pacote ul li {
   margin-bottom: 8px;
+}
+
+
+.section_bg-light{
+
+  background-color: var(--azul-escuro);
+  width: 99%;
+  max-width: 1100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  padding: 80px;
+
+}
+
+.valores-lista {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.valores-lista li {
+  margin-bottom: 12px;
+}
+
+.bg-light {
+  background: #f7f7f7;
+}
+
+
+
+@media (max-width: 992px) {
+
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .grid,
+  .cards,
+  .pacotes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  /* Menu em coluna */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* Texto menor */
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  /* Secções mais compactas */
+  section {
+    padding: 50px 15px;
+  }
+
+  /* Cards em 1 coluna */
+  .grid,
+  .cards,
+  .pacotes-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  button,
+  .btn {
+    width: 100%;
+  }
+
+}
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
 }
